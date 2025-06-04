@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+#background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.converter-box {
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.converter-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin-top: 0;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+textarea, #text-input, #speech-to-text-output {
+    width: 100%;
+    padding-left: 15px;
+    min-height: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+textarea:focus, #text-input:focus, #speech-to-text-output:focus {
+    outline: none;
+    border-color: #4dabf7;
+}
+
+/* Remove these lines if they exist */
+/*
+#text-output, #text-input {
+    min-height: 100px;
+    background-color: #ecf0f1;
+}
+
+#speech-to-text-output {
+    min-height: 100px;
+    background-color: #2a2a2a;
+}
+*/
+
+button {
+    background-color: #4dabf7;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #339af0;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #4d4d4d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#recording-status {
+    font-style: italic;
+    color: #a0a0a0;
+    margin-top: 10px;
+}
+
+#audio-container {
+    margin-top: 20px;
+}
+
+#audio-container audio {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.converter-box {
+    animation: fadeIn 0.5s ease-out;
+}
+
